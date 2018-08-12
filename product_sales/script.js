@@ -22,7 +22,7 @@ function myFunc(id) {
     }
 }
 
-openMail("Borge")
+openMail("adidas")
 function openMail(personName) {
     var i;
     var x = document.getElementsByClassName("person");
