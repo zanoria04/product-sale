@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+<body> 
+
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
+  <a href="https://zanoria04.github.io/im-joshua/im-joshua/" class="w3-bar-item w3-button w3-border-bottom w3-large"><img src="company-logo.png" style="width:60%;"></a>
+  <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
+  class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Log In <i class="w3-padding fa fa-check-square-o"></i></a>
+  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Brand (5)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <div id="Demo1" class="w3-hide w3-animate-left">
+
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="bench.jpg" style="width:15%;"><span class="w3-opacity w3-large">BENCH</span>
+        <h6>SALE: Jan 1 - Dec 30, 2018</h6>
+      </div>
+    </a>
+
+     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Jane');w3_close();">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/New_Balance_logo.svg/1000px-New_Balance_logo.svg.png" style="width:15%;"><span class="w3-opacity w3-large">new balance</span>
+        <p>SALE: Jan 1 - Dec 30, 2018</p>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('John');w3_close();">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="converse-logo.jpg" style="width:15%;"><span class="w3-opacity w3-large">CONVERSE</span>
+        <p>SALE: Jan 1 - Dec 30, 2018</p>
+      </div>
+    </a>
+
+
+  </div>
+  <!--<a href="#" class="w3-bar-item w3-button"><i class="fa fa-angle-right w3-margin-right"></i>Brand 1</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-angle-right w3-margin-right"></i>Brand 2</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-angle-right w3-margin-right"></i>Brand 3</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-angle-right w3-margin-right"></i>Brand 4</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-angle-right w3-margin-right"></i>Brand 5</a>-->
+</nav>
+
+<!-- Modal that pops up when you click on "New Message" -->
+<div id="id01" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-red">
+       <span onclick="document.getElementById('id01').style.display='none'"
+       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+      <h2>Log In</h2>
+    </div>
+    <div class="w3-panel">
+      <label>Email</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      <label>Password</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      
+      <div class="w3-section">
+        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'"> Continue  <i class="fa fa-paper-plane"></i></a> 
+      </div>    
+    </div>
+  </div>
+</div>
+
+<!-- Overlay effect when opening the side navigation on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="w3-main" style="margin-left:320px;">
+<i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+<a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+
+<div id="Borge" class="w3-container person">
+  <br>
+  <img class="w3-round  w3-animate-top" src="bench.jpg" style="width:20%;">
+  <h5 class="w3-opacity">Bench (stylized as bench/ or BENCH/) is a Philippine retail brand of clothing, bags, accessories, footwear and fragrances.</h5>
+  <h4><i class="fa fa-clock-o"></i> SALE PERIOD: January 1 - December 30, 2018</h4>
+  <a class="w3-button w3-light-grey" href="https://shop.bench.com.ph/">Visit<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <hr>
+  
+  
+</div>
+
+<div id="Jane" class="w3-container person">
+  <br>
+  <img class="w3-round w3-animate-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/New_Balance_logo.svg/1000px-New_Balance_logo.svg.png" style="width:20%;">
+  <h5 class="w3-opacity">New Balance Athletics, Inc. (NB), best known as simply New Balance, is an American multinational corporation based in the Brighton neighborhood of Boston, Massachusetts. The company was founded in 1906 as the "New Balance Arch Support Company" and is one of the world's major sports footwear manufacturers.</h5>
+  <h4><i class="fa fa-clock-o"></i> SALE PERIOD: January 1 - December 30, 2018</h4>
+  <a class="w3-button w3-light-grey" href="https://www.newbalance.com/">Visit<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <hr>
+
+
+</div>
+
+<div id="John" class="w3-container person">
+  <br>
+  <img class="w3-round w3-animate-top" src="converse-logo.jpg" style="width:20%;">
+  <h5 class="w3-opacity">Converse is an American shoe company that primarily produces skating shoes and lifestyle brand footwear and apparel. Founded in 1908, it has been a subsidiary of Nike, Inc. since 2003.</h5>
+  <h4><i class="fa fa-clock-o"></i> SALE PERIOD: January 1 - December 30, 2018</h4>
+  <a class="w3-button w3-light-grey" href="http://www.converse.com/">Visit<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <hr>
+
+
+</div>
+
+<script src="script.js"></script>
+
+</div>
+
+</body>
+</html> 
